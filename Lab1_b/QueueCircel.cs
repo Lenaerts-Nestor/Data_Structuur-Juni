@@ -12,7 +12,7 @@ namespace Lab1_b
 
         #endregion
 
-
+        //IK BEN NIET ZEKER ALS DEZE DE PERFECTE MANIER IS OM CIRCELQUEUE TE DOEN!!!!!!!
         #region Public
         //de lengte geven:
         public QueueCircel(int size)
@@ -25,7 +25,7 @@ namespace Lab1_b
         {
             if (!IsFull())
             {
-
+                //om die (Rear + 1) % VS1.Length  te begrijpen doe gebruik effe de lengte 6 en speel effe dermee, tis begrijp baar:
                 VS1[Rear] = getal;
                 Rear = (Rear + 1) % VS1.Length;
                 return VS1;
@@ -54,7 +54,7 @@ namespace Lab1_b
             }
         }
 
-
+        //controleer als de lijst niet leeg is:
         public bool IsEmpty()
         {
             if (Front == -1)
@@ -63,9 +63,10 @@ namespace Lab1_b
             }
             return false;
         }
-
+        //controleer als de lijst niet vol is:
         public bool IsFull()
         {
+            
 
             if ((Rear + 1) % VS1.Length == Front)
             {
